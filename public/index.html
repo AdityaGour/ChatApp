@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ChattApp</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Titillium+Web:400,300,700&amp;subset=latin,latin-ext" />
+    <link rel="stylesheet" href="node_modules/bootstrap.ui/dist/css/bootstrap-ui.min.css" />
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-route/angular-route.js"></script>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCsMI3BA-8mmogTcaBbjIO0_PAtAPMMKbI",
+            authDomain: "chatapp-7edc4.firebaseapp.com",
+            databaseURL: "https://chatapp-7edc4.firebaseio.com",
+            projectId: "chatapp-7edc4",
+            storageBucket: "chatapp-7edc4.appspot.com",
+            messagingSenderId: "800449729118"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="node_modules/angularfire/dist/angularfire.js"></script>
+    <script src="app.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm  navbar-dark">
+        <div class="container">
+            <a href="" class="navbar-brand"></a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navID">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navID">
+                <ul class="navbar-nav ml-auto ">
+                    <li class="nav-item " >
+                       
+                    {{chat.name}}
+                    </li>
+                    <li class="nav-item text-white">demo</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div ng-view></div>
+
+</body>
+
+</html>

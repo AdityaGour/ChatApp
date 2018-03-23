@@ -1,0 +1,13 @@
+<div >
+    <input type="text" ng-model="home.message">
+    <button ng-click="home.addTask()">Add</button>
+    
+    <ol>
+        <li ng-class="{'done':task.status}" ng-click="chat.checkTask(task._id)" ng-repeat="task in home.tasks " >{{task.name}} {{task.time | date:"dd MMM" }}
+            <button ng-click="chat.tasks.$remove($index)">X</button>
+        </li>
+    </ol>
+    
+   
+
+</div>
